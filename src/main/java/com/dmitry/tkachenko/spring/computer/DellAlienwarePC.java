@@ -40,14 +40,51 @@ public class DellAlienwarePC implements Case {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
 
-        sb.append(String.format("\nMotherboard: %s\n", motherboard.info()));
-        sb.append(String.format("CPU: %s\n", cpu.info()));
-        sb.append(String.format("Graphics: %s\n", graphics.info()));
-        sb.append(String.format("RAM: %s\n", ram.info()));
-        sb.append(String.format("Storage: %s\n", storage.info()));
+        return String.format("\nMotherboard: %s\n", motherboard.info()) +
+                String.format("CPU: %s\n", cpu.info()) +
+                String.format("Graphics: %s\n", graphics.info()) +
+                String.format("RAM: %s\n", ram.info()) +
+                String.format("Storage: %s\n", storage.info());
+    }
 
-        return sb.toString();
+    public Motherboard getMotherboard() {
+        return motherboard;
+    }
+
+    public void setMotherboard(Motherboard motherboard) {
+        this.motherboard = motherboard;
+    }
+
+    public CPU getCpu() {
+        return cpu;
+    }
+
+    public void setCpu(CPU cpu) {
+        this.cpu = cpu;
+    }
+
+    public Graphics getGraphics() {
+        return graphics;
+    }
+
+    public void setGraphics(Graphics graphics) {
+        this.graphics = graphics;
+    }
+
+    public RAM getRam() {
+        return ram;
+    }
+
+    public void setRam(RAM ram) {
+        this.ram = ram;
+    }
+
+    public Storage getStorage() {
+        return storage;
+    }
+
+    public void setStorage(Storage storage) {
+        this.storage = storage;
     }
 }

@@ -3,25 +3,28 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="myPC" class="com.dmitry.tkachenko.spring.computer.DellAlienwarePC">
-        <constructor-arg ref="Gigabyte"/>
-        <constructor-arg ref="Athlon"/>
-        <constructor-arg ref="Radeon"/>
-        <constructor-arg ref="DDR4"/>
-        <constructor-arg ref="WesternDigital"/>
+        <constructor-arg ref="gigabyte"/>
+        <constructor-arg ref="athlon"/>
+        <constructor-arg ref="radeon"/>
+        <constructor-arg ref="ddr4"/>
+        <constructor-arg ref="westernDigital"/>
+
+        <!--change motherboard to asus-->
+        <property name="motherboard" ref="asus"/>
     </bean>
 
-    <bean id="Asus" class="com.dmitry.tkachenko.spring.computer.component.motherboard.impl.Asus"/>
-    <bean id="Gigabyte" class="com.dmitry.tkachenko.spring.computer.component.motherboard.impl.Gigabyte"/>
+    <bean id="asus" class="com.dmitry.tkachenko.spring.computer.component.motherboard.impl.Asus"/>
+    <bean id="gigabyte" class="com.dmitry.tkachenko.spring.computer.component.motherboard.impl.Gigabyte"/>
 
-    <bean id="Athlon" class="com.dmitry.tkachenko.spring.computer.component.cpu.impl.Athlon"/>
-    <bean id="CoreI7" class="com.dmitry.tkachenko.spring.computer.component.cpu.impl.CoreI7"/>
+    <bean id="athlon" class="com.dmitry.tkachenko.spring.computer.component.cpu.impl.Athlon"/>
+    <bean id="coreI7" class="com.dmitry.tkachenko.spring.computer.component.cpu.impl.CoreI7"/>
 
-    <bean id="GeForce" class="com.dmitry.tkachenko.spring.computer.component.graphics.impl.GeForce"/>
-    <bean id="Radeon" class="com.dmitry.tkachenko.spring.computer.component.graphics.impl.Radeon"/>
+    <bean id="geForce" class="com.dmitry.tkachenko.spring.computer.component.graphics.impl.GeForce"/>
+    <bean id="radeon" class="com.dmitry.tkachenko.spring.computer.component.graphics.impl.Radeon"/>
 
-    <bean id="DDR3" class="com.dmitry.tkachenko.spring.computer.component.ram.impl.DDR3"/>
-    <bean id="DDR4" class="com.dmitry.tkachenko.spring.computer.component.ram.impl.DDR4"/>
+    <bean id="ddr3" class="com.dmitry.tkachenko.spring.computer.component.ram.impl.DDR3"/>
+    <bean id="ddr4" class="com.dmitry.tkachenko.spring.computer.component.ram.impl.DDR4"/>
 
-    <bean id="HGST" class="com.dmitry.tkachenko.spring.computer.component.storage.impl.HGST"/>
-    <bean id="WesternDigital" class="com.dmitry.tkachenko.spring.computer.component.storage.impl.WesternDigital"/>
+    <bean id="hgst" class="com.dmitry.tkachenko.spring.computer.component.storage.impl.HGST"/>
+    <bean id="westernDigital" class="com.dmitry.tkachenko.spring.computer.component.storage.impl.WesternDigital"/>
 </beans>
