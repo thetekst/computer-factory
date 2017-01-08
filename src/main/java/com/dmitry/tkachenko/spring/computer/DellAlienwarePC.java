@@ -28,6 +28,14 @@ public class DellAlienwarePC implements Case {
         this.storage = storage;
     }
 
+    public void initObj() {
+        System.out.println("init object");
+    }
+
+    public void destroyObj() {
+        System.out.println("destroy object");
+    }
+
     @Override
     public void turnOn() {
         System.out.println("loading...");
