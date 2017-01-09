@@ -3,6 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-lazy-init="true">
+
+    <import resource="motherboard_context.xml"/>
+    <import resource="cpu_context.xml"/>
+    <import resource="graphics_context.xml"/>
+    <import resource="ram_context.xml"/>
+    <import resource="storage_context.xml"/>
+
     <bean id="myPC" class="com.dmitry.tkachenko.spring.computer.DellAlienwarePC"
           init-method="initObj"
           destroy-method="destroyObj">
@@ -16,19 +23,4 @@
         <!--change motherboard to asus-->
         <property name="motherboard" ref="asus"/>
     </bean>
-
-    <bean id="asus" class="com.dmitry.tkachenko.spring.computer.component.motherboard.impl.Asus"/>
-    <bean id="gigabyte" class="com.dmitry.tkachenko.spring.computer.component.motherboard.impl.Gigabyte"/>
-
-    <bean id="athlon" class="com.dmitry.tkachenko.spring.computer.component.cpu.impl.Athlon"/>
-    <bean id="coreI7" class="com.dmitry.tkachenko.spring.computer.component.cpu.impl.CoreI7"/>
-
-    <bean id="geForce" class="com.dmitry.tkachenko.spring.computer.component.graphics.impl.GeForce"/>
-    <bean id="radeon" class="com.dmitry.tkachenko.spring.computer.component.graphics.impl.Radeon"/>
-
-    <bean id="ddr3" class="com.dmitry.tkachenko.spring.computer.component.ram.impl.DDR3"/>
-    <bean id="ddr4" class="com.dmitry.tkachenko.spring.computer.component.ram.impl.DDR4"/>
-
-    <bean id="hgst" class="com.dmitry.tkachenko.spring.computer.component.storage.impl.HGST"/>
-    <bean id="westernDigital" class="com.dmitry.tkachenko.spring.computer.component.storage.impl.WesternDigital"/>
 </beans>
